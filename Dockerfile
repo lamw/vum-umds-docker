@@ -19,7 +19,7 @@ ENV UMDS_PASSWORD $UMDS_PASSWORD
 
 RUN apt-get update
 
-RUN apt-get -y install vim perl tar sed psmisc unixodbc postgresql postgresql-contrib odbc-postgresql
+RUN apt-get -y install vim perl tar sed psmisc unixodbc postgresql postgresql-contrib odbc-postgresql python-minimal
 
 ADD $UMDS_INSTALLER_SCRIPT /tmp/
 
