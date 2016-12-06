@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ["$#" -ne 4]; then
+if [ "$#" -ne 4 ]; then
     echo -e "\n[Usage]: ./$0 [UMDS_DATABASE_NAME] [UMDS_DSN_NAME] [UMDS_USERNAME] [UMDS_PASSWORD]"
     echo -e "\t./$0 UMDSDB UMDS_DSN umdsuser VMware1!"
     exit 1
@@ -55,7 +55,7 @@ UsageCount=1
 __EOF__
 
 echo "Updating pg_hba.conf ..."
-echo "local  ${UMDS_DATABASE_NAME}    umdsuser           md5" >> /etc/postgresql/9.5/main/pg_hba.conf
+echo "local  ${UMDS_DATABASE_NAME}    umdsuser           md5" >> /etc/postgresql/9.3/main/pg_hba.conf
 
 echo "Symlink /var/run/postgresql/.s.PGSQL.5432 /tmp/.s.PGSQL.5432 ..."
 ln -s /var/run/postgresql/.s.PGSQL.5432 /tmp/.s.PGSQL.5432

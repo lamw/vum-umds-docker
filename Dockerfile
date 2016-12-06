@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 MAINTAINER wlam@vmware.com
 
@@ -19,7 +19,7 @@ ENV UMDS_PASSWORD $UMDS_PASSWORD
 
 RUN apt-get update
 
-RUN apt-get -y install vim perl tar sed psmisc unixodbc postgresql postgresql-contrib odbc-postgresql python-minimal
+RUN apt-get -y install vim perl tar sed psmisc unixodbc postgresql postgresql-contrib odbc-postgresql
 
 ADD $UMDS_INSTALLER_SCRIPT /tmp/
 
